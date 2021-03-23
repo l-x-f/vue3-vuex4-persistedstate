@@ -1,9 +1,8 @@
-export default options => {
+export default (options = {}) => {
   const storage = options.storage || (window && window.localStorage)
   const key = options.key || 'vuex'
 
   // 获取state的值
-
   const getState = (key, storage) => {
     const value = storage.getItem(key)
     try {
